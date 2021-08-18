@@ -9,7 +9,14 @@ const AddNewTodos = ({ addTodo }) => {
     setTitle("");
   };
   return (
-    <form onSubmit={handleSubmit}>
+    <form
+      onSubmit={handleSubmit}
+      style={{
+        display: "flex",
+        alignContent: "center",
+        justifyContent: "center",
+      }}
+    >
       <input
         type="text"
         placeholder="Add new todos"
@@ -17,7 +24,9 @@ const AddNewTodos = ({ addTodo }) => {
         value={title}
         required
       ></input>
-      <button type="submit">Add Todo</button>
+      <button type="submit" style={{ display: "block", marginLeft: "10px" }}>
+        Add Todo
+      </button>
     </form>
   );
 };
