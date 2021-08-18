@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AddNewTodos from "./TodoList";
+import AddNewTodos from "./AddNewTodos";
 import uuid from "uuid/dist/v1";
 
 const TodoList = () => {
@@ -16,12 +16,12 @@ const TodoList = () => {
   return (
     <div>
       <h1>Todays todo list</h1>
+      <AddNewTodos addTodo={addTodo} />
       <ol>
         {todos.map((todo) => {
           return <li key={todo.id}>{todo.title}</li>;
         })}
       </ol>
-      <AddNewTodos addTodo={addTodo} />
     </div>
   );
 };

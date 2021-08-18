@@ -1,10 +1,11 @@
 import React, { useState } from "react";
 
-const AddNewTodos = ({ addTodos }) => {
+const AddNewTodos = ({ addTodo }) => {
   const [title, setTitle] = useState("");
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    addTodos(title);
+    addTodo(title);
     setTitle("");
   };
   return (
